@@ -1,0 +1,9 @@
+
+@import '_variables.scss';
+@import '_reset.scss';
+
+body{
+    background: $background-color;
+    font-family: 'Roboto', 'Helvitica Neue', 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
+    margin: 20px;
+}
