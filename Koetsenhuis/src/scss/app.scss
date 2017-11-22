@@ -2,26 +2,20 @@
 @import '_variables.scss';
 @import '_reset.scss';
 
+@import 'header.scss';
+
 body{
     background: $background-color;
     font-family: 'Roboto', 'Helvitica Neue', 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
 
 }
-header{
-    
-    .top { 
+
+main.home{
+
+    .home_header {
+        background: url('../images/terras_home.jpg') no-repeat;
+        background-size: cover;
         width: 100%;
-        height: 45px;
-        background-color: rgba( $color-green-light, .15 );
-        border-bottom: 2px solid $color-green-dark;
-
-        display: flex;
-        // flex-direction: row;
-        justify-content: space-between
-
-
-        div{
-            // display: inline
-        }
+        height: 500px;
     }
 }

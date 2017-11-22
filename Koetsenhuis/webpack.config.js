@@ -1,7 +1,8 @@
 const webpack               = require("webpack"),
       path                  = require("path"),
       cleanWebpackPlugin    = require("clean-webpack-plugin"),
-      extractPlugin         = require("extract-text-webpack-plugin");
+      extractPlugin         = require("extract-text-webpack-plugin"),
+      fileWatcherPlugin     = require("file-watcher-webpack-plugin");;
 
 module.exports = {
 
@@ -15,7 +16,12 @@ module.exports = {
         new extractPlugin({
             filename: '../css/app.css',
             allChunks: true
+        }),
+        new fileWatcherPlugin({
+            root: __dirname,
+            files: ['**/**/*.scss', '**/**/*.js']
         })
+    
     ],
     module: {
         rules: [
@@ -32,6 +38,17 @@ module.exports = {
             {
                 test: /\.scss$/,
                 loader: extractPlugin.extract(['css-loader', 'sass-loader'])
+            },
+            {
+                test: /\.(png|jpg|gif)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '../images/[name].[ext]'
+                        }  
+                    }
+                ]
             }
         ]
     }

@@ -7,56 +7,68 @@
 
     <title>Koetsenhuis</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="css/app.css">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js" defer ></script>
 </head>
 <body>
-    <header>
-        <div class="top">
-            <div class="top_left">
-                social en tel
-            </div>
-            <div class="top_right">
-                <a href="#">signup</a><a href="#">login</a>
-            </div>
-        </div>
-        <h1>Hoetsenhuis</h1>
-        <nav>
-            <ul>
-                <li>Home</li>
-                <li>Menu</li>
-                <li>Reserveren</li>
-                <li>Gallerij</li>
-                <li>Biesbroek</li>
-            </ul>
-        </nav>
+    <header class="main">
+
+        <section>
+            <img src="images/facebook.png" alt="Facebook logo">
+            <img src="images/phone-call.png" alt="Telefoon logo">
+            
+            <a href="tel:050 67 87 50">050 / 67 87 50</a>           
+        </section>      
+        <section>
+            <a href="#">Registreren</a>
+            <a href="#">Log in</a>
+        </section>
     </header>
-    <section>
-        <h2>openingsuren</h2>
-        <div>icons</div>
+    <nav>
+        <div>
+            <img src="images/Logo_groen.png" alt="Logo Koetsenhuis">
+            <p>oetsenhuis</p>
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Reserveren</a></li>
+            <li><a href="#">Gallerij</a></li>
+            <li><a href="#">Biesbroek</a></li>
+        </ul>
+    </nav>
+    <main class="home">
+        
+        <section>
+            <header class="home_header">
+                <div class="home_header_white">
+                    <h2>openingsuren</h2>
+                </div>  
+            </header>
+            
+            <div>icons</div>
+    
+    
+        </section>
+        <section>
+            <h2>berijkbaarheid</h2>
+            <article>
+                map
+            </article>
+            <article>
+                pointer
+                Zeeweg 98, 8200 Brugge
+            </article>
+            <article>
+                parking
+                <button class="btn_Parking">Zeeweg 90 <br /> 8200 Brugge</button>
+                <button class="btn_Parking">Diksmuide Heerweg 425-453 <br /> 8200 Brugge</button>
+                <button class="btn_Parking active">Doornstraat 358-386 <br /> 8200 Brugge</button>
+            </article>
+        </section>
 
-
-    </section>
-    <section>
-        <h2>berijkbaarheid</h2>
-        <article>
-            map
-        </article>
-        <article>
-            pointer
-            Zeeweg 98, 8200 Brugge
-        </article>
-        <article>
-            parking
-            <button class="btn_Parking">Zeeweg 90 <br /> 8200 Brugge</button>
-            <button class="btn_Parking">Diksmuide Heerweg 425-453 <br /> 8200 Brugge</button>
-            <button class="btn_Parking active">Doornstraat 358-386 <br /> 8200 Brugge</button>
-        </article>
-    </section>
+    </main>
     <footer>
         <h2>contact</h2>
         <i>icon mail</i>
