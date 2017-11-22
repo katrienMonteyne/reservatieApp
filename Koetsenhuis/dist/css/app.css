@@ -1,4 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px; }
+
 body {
-  background: #eee;
-  font-family: 'Roboto', 'Helvitica Neue', 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
-  margin: 20px; }
+  font-family: 'Roboto', 'Helvitica Neue', 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif'; }
+
+body#menu header {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  background: #e9efcc;
+  padding: 15px 80px; }
+  body#menu header img {
+    height: 25px; }
+  body#menu header section {
+    justify-content: space-around;
+    align-content: center;
+    display: flex; }
+    body#menu header section img {
+      padding-left: 20px; }
+    body#menu header section div {
+      padding: 0 20px;
+      padding-top: 5px; }
+
+body#menu nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 80px; }
+  body#menu nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around; }
+    body#menu nav ul li {
+      padding: 0 15px; }
