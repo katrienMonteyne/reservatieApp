@@ -1,36 +1,51 @@
-* {
+@import url(https://fonts.googleapis.com/css?family=Paytone+One);* {
   margin: 0;
   padding: 0;
   font-size: 16px; }
 
-body {
-  font-family: 'Roboto', 'Helvitica Neue', 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif'; }
-
-body#menu header {
+header {
   display: flex;
   justify-content: space-between;
   align-content: center;
   background: #e9efcc;
   padding: 15px 80px; }
-  body#menu header img {
+  header img {
     height: 25px; }
-  body#menu header section {
+  header section {
     justify-content: space-around;
     align-content: center;
     display: flex; }
-    body#menu header section img {
-      padding-left: 20px; }
-    body#menu header section div {
+    header section img {
+      padding-right: 20px; }
+    header section a {
       padding: 0 20px;
       padding-top: 5px; }
 
-body#menu nav {
+nav {
   display: flex;
   justify-content: space-between;
-  padding: 25px 80px; }
-  body#menu nav ul {
+  padding: 25px 80px;
+  align-content: flex-end; }
+  nav ul {
     display: flex;
     list-style: none;
-    justify-content: space-around; }
-    body#menu nav ul li {
+    justify-content: space-around;
+    align-items: flex-end; }
+    nav ul li {
+      bottom: 0;
       padding: 0 15px; }
+  nav div {
+    position: relative;
+    display: flex;
+    align-content: flex-end; }
+    nav div img {
+      height: 80px; }
+    nav div p {
+      position: absolute;
+      bottom: -10px;
+      padding-left: 95px;
+      font-family: "Paytone One", sans-serif;
+      font-size: 2.1em; }
+
+body {
+  font-family: 'Roboto', 'Helvitica Neue', 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif'; }
