@@ -53,7 +53,50 @@ body {
   font-family: 'Roboto', 'Helvitica Neue', 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif'; }
 
 main.home .home_header {
+  z-index: auto;
+  width: 100%;
+  height: 500px;
+  margin: 100px 0 0 0;
+  transform: skewy(-5deg);
+  -ms-transform: skewy(-5deg);
+  /* IE 9 */
+  -webkit-transform: skewy(-5deg);
+  /* new styles */
+  position: relative;
+  overflow: hidden;
+  -webkit-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left; }
+
+main.home .home_header::before {
+  content: "";
   background: url(../images/terras_home.jpg) no-repeat;
   background-size: cover;
   width: 100%;
-  height: 500px; }
+  height: 600px;
+  margin-top: -100px;
+  transform: skewy(5deg);
+  -ms-transform: skewy(5deg);
+  /* IE 9 */
+  -webkit-transform: skewy(5deg);
+  position: absolute;
+  -webkit-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left; }
+
+main.home .home_header_white {
+  background: rgba(255, 0, 221, 0.9);
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  margin: -200px auto;
+  left: calc(50% +( $circle-size / 2));
+  border-radius: 100%;
+  position: absolute; }
+  main.home .home_header_white h2 {
+    padding: 70px 0;
+    color: #46162B;
+    font-size: 2em; }
+
+main.home .white_openingsuren {
+  height: 1000px; }
