@@ -48,9 +48,79 @@ nav {
       font-family: "Paytone One", sans-serif;
       font-size: 2.1em; }
 
+footer {
+  width: 100%;
+  display: block;
+  color: #000;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 50px;
+  transform: skewy(-5deg);
+  -ms-transform: skewy(-5deg);
+  /* IE 9 */
+  -webkit-transform: skewy(-5deg); }
+  footer * {
+    display: block;
+    text-align: center;
+    margin: 0 auto; }
+  footer img {
+    width: 80px;
+    height: 80px; }
+  footer h2 {
+    margin-bottom: 0;
+    padding-bottom: 0; }
+  footer img {
+    margin-top: 100px;
+    margin-top: 50px; }
+  footer a {
+    padding-top: 10px; }
+  footer .phone {
+    display: flex;
+    padding: 2em;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center; }
+
+footer > * {
+  content: "";
+  transform: skewy(5deg);
+  -ms-transform: skewy(5deg);
+  /* IE 9 */
+  -webkit-transform: skewy(5deg); }
+
+footer::after {
+  content: "";
+  display: block;
+  height: 100%;
+  position: relative; }
+
+footer.light {
+  background: #F6F7F1; }
+
+footer.dark {
+  background: #E9EECD; }
+
 body {
   background: #eee;
   font-family: 'Roboto', 'Helvitica Neue', 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif'; }
+
+h2 {
+  padding: 70px 0;
+  color: #46162B;
+  font-size: 2em; }
+
+a {
+  color: black;
+  text-decoration: none;
+  transition: all 2s linear; }
+
+a:hover {
+  font-weight: bolder;
+  text-decoration: underline; }
+
+main {
+  margin-bottom: 100px; }
 
 main.home .home_header {
   z-index: auto;
@@ -93,10 +163,21 @@ main.home .home_header_white {
   left: calc(50% +( $circle-size / 2));
   border-radius: 100%;
   position: absolute; }
-  main.home .home_header_white h2 {
-    padding: 70px 0;
-    color: #46162B;
-    font-size: 2em; }
 
 main.home .white_openingsuren {
   height: 1000px; }
+
+main.home button {
+  color: #5F7217;
+  background: #EFECE4;
+  padding: 1em;
+  border: none;
+  box-shadow: 1px 1px 1px #999; }
+
+main.home button:focus {
+  outline: 0; }
+
+main.home button:active {
+  color: #2F3808;
+  outline: none;
+  border: none; }
