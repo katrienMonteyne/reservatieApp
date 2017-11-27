@@ -1,18 +1,132 @@
-
 @import '_variables.scss';
 @import '_reset.scss';
 @import 'header.scss';
-
-
-body{
+body {
     font-family: 'Roboto', 'Helvitica Neue', 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
-
 }
-
 
 body#menu {
-
-
-
+    .menu_main {
+        position: relative;
+        margin: 0 auto;
+        overflow: hidden; //width: 100%;
+        height: 100%;
+        .menu {
+            display: flex;
+            justify-content: flex-start;
+            height: 100%;
+            padding-bottom: 5%;
+            .menu_main_tekst {
+                padding-top: 9%;
+                padding-left: -50px;
+                padding-right: -50px;
+                margin: 0 auto;
+                transform: skewY(5deg);
+                h1 {
+                    flex-basis: 100%;
+                    font-size: 2em;
+                    padding-bottom: 20px;
+                    text-align: center;
+                }
+                table {
+                    border-collapse: collapse;
+                    width: 100%;
+                }
+                table td:first-child {
+                    padding: 15px 40px;
+                }
+                table td:last-child {
+                    padding: 0 40px;
+                }
+            }
+            .menu_main_buttons {
+                margin: 0 20%;
+                padding-top: 5%;
+                padding-bottom:5%;
+                transform: skewY(5deg);
+                .left {
+                    margin-left: -46%;
+                }
+                .hexagon {
+                    margin-top: 10px;
+                    font-size: 0.5em;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .hex:before,
+                    .hex:after {
+                        content: "";
+                        width: 0;
+                        height: 0;
+                        position: absolute;
+                        border-left: 8.7em solid transparent;
+                        border-right: 8.7em solid transparent;
+                    }
+                    .hex:before {
+                        border-bottom: 5em solid $color-button-menu;
+                        top: -5em;
+                        padding-top: 1px;
+                        transition: border-bottom 0.2s ease-out;
+                    }
+                    .hex:after {
+                        bottom: -5em;
+                        border-top: 5em solid $color-button-menu;
+                        transition: border-top 0.2s ease-out;
+                    }
+                    .hex {
+                        margin-top: 5em;
+                        width: 17.32em;
+                        height: 10em;
+                        background-color: $color-button-menu;
+                        position: relative;
+                        display: flex;
+                        vertical-align: middle;
+                        transition: background-color 0.2s ease-out;
+                    }
+                    .hex>p {
+                        padding-left: 10px;
+                        padding-top: 20px;
+                        height: 80px;
+                        width: 50%;
+                        text-align: center;
+                        font-size: 2.4em;
+                        color: $text-color-grey;
+                    }
+                    .hex>img {
+                        padding-top: 10px;
+                        height: 55px;
+                        text-align: center;
+                    }
+                    &:hover {
+                        
+                        cursor: pointer;
+                        .hex {
+                            background-color: $color-button-menu-selected;
+                            transition: background-color 0.4s ease-out;
+                        }
+                        .hex:before {
+                            border-bottom: 5em solid $color-button-menu-selected;
+                            transition: border-bottom 0.4s ease-out;
+                        }
+                        .hex:after {
+                            border-top: 5em solid $color-button-menu-selected;
+                            transition: border-top 0.4s ease-out;
+                        }
+                    }
+                }
+                .selected p {
+                    color: black !important;
+                }
+            }
+        }
+        .menu_main_first {
+            margin-top: 5%;
+            background: $color-green-light;
+            transform: skewY(-5deg);
+        }
+        .menu_main_second {
+            background: $color-green-extra-light;
+            transform: skewY(-5deg);
+        }
+    }
 }
-

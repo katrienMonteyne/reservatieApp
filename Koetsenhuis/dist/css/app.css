@@ -1,14 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Paytone+One);* {
   margin: 0;
-  padding: 0;
-  font-size: 16px; }
+  padding: 0; }
 
 header {
   display: flex;
   justify-content: space-between;
   align-content: center;
   background: #e9efcc;
-  padding: 15px 80px; }
+  padding: 15px 80px;
+  border-bottom: 2px solid #5f7309; }
   header img {
     height: 25px; }
   header section {
@@ -49,3 +49,103 @@ nav {
 
 body {
   font-family: 'Roboto', 'Helvitica Neue', 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif'; }
+
+body#menu .menu_main {
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 100%; }
+  body#menu .menu_main .menu {
+    display: flex;
+    justify-content: flex-start;
+    height: 100%;
+    padding-bottom: 5%; }
+    body#menu .menu_main .menu .menu_main_tekst {
+      padding-top: 9%;
+      padding-left: -50px;
+      padding-right: -50px;
+      margin: 0 auto;
+      transform: skewY(5deg); }
+      body#menu .menu_main .menu .menu_main_tekst h1 {
+        flex-basis: 100%;
+        font-size: 2em;
+        padding-bottom: 20px;
+        text-align: center; }
+      body#menu .menu_main .menu .menu_main_tekst table {
+        border-collapse: collapse;
+        width: 100%; }
+      body#menu .menu_main .menu .menu_main_tekst table td:first-child {
+        padding: 15px 40px; }
+      body#menu .menu_main .menu .menu_main_tekst table td:last-child {
+        padding: 0 40px; }
+    body#menu .menu_main .menu .menu_main_buttons {
+      margin: 0 20%;
+      padding-top: 5%;
+      padding-bottom: 5%;
+      transform: skewY(5deg); }
+      body#menu .menu_main .menu .menu_main_buttons .left {
+        margin-left: -46%; }
+      body#menu .menu_main .menu .menu_main_buttons .hexagon {
+        margin-top: 10px;
+        font-size: 0.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        body#menu .menu_main .menu .menu_main_buttons .hexagon .hex:before,
+        body#menu .menu_main .menu .menu_main_buttons .hexagon .hex:after {
+          content: "";
+          width: 0;
+          height: 0;
+          position: absolute;
+          border-left: 8.7em solid transparent;
+          border-right: 8.7em solid transparent; }
+        body#menu .menu_main .menu .menu_main_buttons .hexagon .hex:before {
+          border-bottom: 5em solid #afe3c7;
+          top: -5em;
+          padding-top: 1px;
+          transition: border-bottom 0.2s ease-out; }
+        body#menu .menu_main .menu .menu_main_buttons .hexagon .hex:after {
+          bottom: -5em;
+          border-top: 5em solid #afe3c7;
+          transition: border-top 0.2s ease-out; }
+        body#menu .menu_main .menu .menu_main_buttons .hexagon .hex {
+          margin-top: 5em;
+          width: 17.32em;
+          height: 10em;
+          background-color: #afe3c7;
+          position: relative;
+          display: flex;
+          vertical-align: middle;
+          transition: background-color 0.2s ease-out; }
+        body#menu .menu_main .menu .menu_main_buttons .hexagon .hex > p {
+          padding-left: 10px;
+          padding-top: 20px;
+          height: 80px;
+          width: 50%;
+          text-align: center;
+          font-size: 2.4em;
+          color: #5F5E5E; }
+        body#menu .menu_main .menu .menu_main_buttons .hexagon .hex > img {
+          padding-top: 10px;
+          height: 55px;
+          text-align: center; }
+        body#menu .menu_main .menu .menu_main_buttons .hexagon:hover {
+          cursor: pointer; }
+          body#menu .menu_main .menu .menu_main_buttons .hexagon:hover .hex {
+            background-color: #95d1b0;
+            transition: background-color 0.4s ease-out; }
+          body#menu .menu_main .menu .menu_main_buttons .hexagon:hover .hex:before {
+            border-bottom: 5em solid #95d1b0;
+            transition: border-bottom 0.4s ease-out; }
+          body#menu .menu_main .menu .menu_main_buttons .hexagon:hover .hex:after {
+            border-top: 5em solid #95d1b0;
+            transition: border-top 0.4s ease-out; }
+      body#menu .menu_main .menu .menu_main_buttons .selected p {
+        color: black !important; }
+  body#menu .menu_main .menu_main_first {
+    margin-top: 5%;
+    background: #e9efcc;
+    transform: skewY(-5deg); }
+  body#menu .menu_main .menu_main_second {
+    background: #F6F7F1;
+    transform: skewY(-5deg); }
