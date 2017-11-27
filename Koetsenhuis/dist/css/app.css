@@ -47,13 +47,54 @@ nav {
       font-family: "Paytone One", sans-serif;
       font-size: 2.1em; }
 
+footer {
+  width: 100%;
+  display: block;
+  color: #000;
+  text-align: center;
+  padding-bottom: 50px;
+  z-index: -2;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 100%;
+  padding-top: 150px;
+  margin-top: -5%; }
+  footer * {
+    display: block;
+    text-align: center;
+    margin: 0 auto; }
+  footer img {
+    width: 80px;
+    height: 80px; }
+  footer h2 {
+    margin-bottom: 0;
+    padding-bottom: 0; }
+  footer img {
+    margin-top: 100px;
+    margin-top: 50px; }
+  footer a {
+    padding-top: 10px; }
+  footer .phone {
+    display: flex;
+    padding: 2em;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center; }
+
+footer.light {
+  background: #F6F7F1; }
+
+footer.dark {
+  background: #E9EECD; }
+
 body {
   font-family: 'Roboto', 'Helvitica Neue', 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif'; }
 
 body#menu .menu_main {
   position: relative;
   margin: 0 auto;
-  overflow: hidden;
   height: 100%; }
   body#menu .menu_main .menu {
     display: flex;
@@ -148,4 +189,5 @@ body#menu .menu_main {
     transform: skewY(-5deg); }
   body#menu .menu_main .menu_main_second {
     background: #F6F7F1;
-    transform: skewY(-5deg); }
+    transform: skewY(-5deg);
+    padding-bottom: 150px; }
