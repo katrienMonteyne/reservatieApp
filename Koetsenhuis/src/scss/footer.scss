@@ -1,0 +1,52 @@
+footer {
+    width: 100%;
+    display: block;
+    color: #000;
+    text-align: center;
+    padding-bottom: 50px;
+    z-index: -2;
+    position: relative;
+    margin: 0 auto;
+    overflow : hidden;
+    height: 100%;
+    padding-top: 150px;
+    margin-top: -5%;
+
+    * {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+    }
+    img {
+        width: 80px;
+        height: 80px;
+    }
+    h2 {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    img {
+        margin-top: 100px;
+        margin-top: 50px;
+    }
+    a {
+        padding-top: 10px;
+    }
+    .phone {
+        display: flex;
+        padding: 2em;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+}
+
+
+footer.light {
+    background: #F6F7F1;
+}
+
+footer.dark {
+    background: #E9EECD;
+}

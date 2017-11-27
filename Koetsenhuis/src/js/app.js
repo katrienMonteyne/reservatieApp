@@ -1,2 +1,3 @@
-'user strict';
+'use strict';
 
+const renderMenu = require('./menu/render.menu');
