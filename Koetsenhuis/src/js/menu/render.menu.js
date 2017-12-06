@@ -2,6 +2,7 @@
 import MenuList from './menu';
 import * as data from './dummy.data';
 
+
 let renderMenu = (function () {
 
     const ml = new MenuList();
@@ -9,7 +10,7 @@ let renderMenu = (function () {
     const tableTwo = document.querySelectorAll(".menuTable")[1];
 
     tableOne.innerHTML = ml.renderHTML(0);
-    tableOne.innerHTML = ml.renderHTML(0);
+    tableTwo.innerHTML = ml.renderHTML(0);
 
 
     let buttonsOne = document.querySelectorAll(".menu_main_first .hexagon");
@@ -53,9 +54,8 @@ let renderMenu = (function () {
                     changeTitle(0, data.titlesOne, number);
                     deleteBlackImage(0, number);
                     addBlackImage(0, number);
-                }
-                else if(button.classList.contains("two")){
-                    
+                } else if (button.classList.contains("two")) {
+
                     let rendermenu = ml.renderHTML(number);
                     tableTwo.innerHTML = rendermenu;
                     changeTitle(1, data.titlesTwo, number);
@@ -139,5 +139,7 @@ let renderMenu = (function () {
 
 
 })();
+
+
 
 module.export = renderMenu;

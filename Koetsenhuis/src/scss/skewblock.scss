@@ -1,0 +1,20 @@
+.block{
+
+    width: 100%;
+    color: #000;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+
+}
+
+.block_dark {
+    background: $color-green-light;
+    transform: skewY(-5deg);
+}
+
+.block_light{
+    background: $color-green-extra-light;
+    transform: skewY(-5deg);
+}

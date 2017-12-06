@@ -2,133 +2,318 @@
 @import '_reset.scss';
 @import 'header.scss';
 @import 'footer.scss';
+@import 'skewblock.scss';
 body {
+    background: $background-color;
     font-family: 'Roboto', 'Helvitica Neue', 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
 }
 
+
+a {
+    color: black;
+    text-decoration: none;
+    transition: all 2s linear;
+}
+
+a:hover {
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+
+///////////////////////////////////////// MENU LAYOUT
 body#menu {
-    .menu_main {
-        position: relative;
-        margin: 0 auto;
-        //overflow: hidden; //width: 100%;
-        height: 100%;
-        .menu {
-            display: flex;
-            justify-content: flex-start;
-            height: 100%;
+    .menu {
+        display: flex;
+        padding-bottom: 5%;
+        .menu_main_tekst {
+            padding-top: 9%;
+            padding-left: -50px;
+            padding-right: -50px;
+            margin: 0 auto;
+            transform: skewY(5deg);
+            h1 {
+                flex-basis: 100%;
+                font-size: 2em;
+                padding-bottom: 20px;
+                text-align: center;
+            }
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+            table td:first-child {
+                padding: 15px 40px;
+            }
+            table td:last-child {
+                padding: 0 40px;
+            }
+        }
+        .menu_main_buttons {
+            margin: 0 20%;
+            padding-top: 5%;
             padding-bottom: 5%;
-            .menu_main_tekst {
-                padding-top: 9%;
-                padding-left: -50px;
-                padding-right: -50px;
-                margin: 0 auto;
-                transform: skewY(5deg);
-                h1 {
-                    flex-basis: 100%;
-                    font-size: 2em;
-                    padding-bottom: 20px;
+            transform: skewY(5deg);
+            .left {
+                margin-left: -46%;
+            }
+            .hexagon {
+                margin-top: 10px;
+                font-size: 0.5em;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .hex:before,
+                .hex:after {
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    position: absolute;
+                    border-left: 8.7em solid transparent;
+                    border-right: 8.7em solid transparent;
+                }
+                .hex:before {
+                    border-bottom: 5em solid $color-button-menu;
+                    top: -5em;
+                    padding-top: 1px;
+                    transition: border-bottom 0.2s ease-out;
+                }
+                .hex:after {
+                    bottom: -4.9em;
+                    border-top: 5em solid $color-button-menu;
+                    transition: border-top 0.2s ease-out;
+                }
+                .hex {
+                    margin-top: 5em;
+                    width: 17.35em;
+                    height: 10.2em;
+                    background-color: $color-button-menu;
+                    position: relative;
+                    display: flex;
+                    vertical-align: middle;
+                    transition: background-color 0.2s ease-out;
+                }
+                .hex>p {
+                    padding-left: 10px;
+                    padding-top: 20px;
+                    height: 80px;
+                    width: 50%;
+                    text-align: center;
+                    font-size: 2.4em;
+                    color: $text-color-grey;
+                }
+                .hex>img {
+                    padding-top: 10px;
+                    height: 55px;
                     text-align: center;
                 }
-                table {
-                    border-collapse: collapse;
-                    width: 100%;
-                }
-                table td:first-child {
-                    padding: 15px 40px;
-                }
-                table td:last-child {
-                    padding: 0 40px;
-                }
-            }
-            .menu_main_buttons {
-                margin: 0 20%;
-                padding-top: 5%;
-                padding-bottom:5%;
-                transform: skewY(5deg);
-                .left {
-                    margin-left: -46%;
-                }
-                .hexagon {
-                    margin-top: 10px;
-                    font-size: 0.5em;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    .hex:before,
-                    .hex:after {
-                        content: "";
-                        width: 0;
-                        height: 0;
-                        position: absolute;
-                        border-left: 8.7em solid transparent;
-                        border-right: 8.7em solid transparent;
+                &:hover {
+                    cursor: pointer;
+                    .hex {
+                        background-color: $color-button-menu-selected;
+                        transition: background-color 0.4s ease-out;
                     }
                     .hex:before {
-                        border-bottom: 5em solid $color-button-menu;
-                        top: -5em;
-                        padding-top: 1px;
-                        transition: border-bottom 0.2s ease-out;
+                        border-bottom: 5em solid $color-button-menu-selected;
+                        transition: border-bottom 0.4s ease-out;
                     }
                     .hex:after {
-                        bottom: -5em;
-                        border-top: 5em solid $color-button-menu;
-                        transition: border-top 0.2s ease-out;
+                        border-top: 5em solid $color-button-menu-selected;
+                        transition: border-top 0.4s ease-out;
                     }
-                    .hex {
-                        margin-top: 5em;
-                        width: 17.32em;
-                        height: 10em;
-                        background-color: $color-button-menu;
-                        position: relative;
-                        display: flex;
-                        vertical-align: middle;
-                        transition: background-color 0.2s ease-out;
-                    }
-                    .hex>p {
-                        padding-left: 10px;
-                        padding-top: 20px;
-                        height: 80px;
-                        width: 50%;
-                        text-align: center;
-                        font-size: 2.4em;
-                        color: $text-color-grey;
-                    }
-                    .hex>img {
-                        padding-top: 10px;
-                        height: 55px;
-                        text-align: center;
-                    }
-                    &:hover {
-                        
-                        cursor: pointer;
-                        .hex {
-                            background-color: $color-button-menu-selected;
-                            transition: background-color 0.4s ease-out;
-                        }
-                        .hex:before {
-                            border-bottom: 5em solid $color-button-menu-selected;
-                            transition: border-bottom 0.4s ease-out;
-                        }
-                        .hex:after {
-                            border-top: 5em solid $color-button-menu-selected;
-                            transition: border-top 0.4s ease-out;
-                        }
-                    }
-                }
-                .selected p {
-                    color: black !important;
                 }
             }
-        }
-        .menu_main_first {
-            margin-top: 5%;
-            background: $color-green-light;
-            transform: skewY(-5deg);
-        }
-        .menu_main_second {
-            background: $color-green-extra-light;
-            transform: skewY(-5deg);
-            padding-bottom: 150px;
+            .selected p {
+                color: black !important;
+            }
         }
     }
+    .menu_main_first {
+        margin-top: 5%;
+    }
+    .menu_main_second {
+        padding-bottom: 150px;
+    }
+}
+
+///////////////////////////////////////// HOME LAYOUT
+main.home {
+    section>header {
+        padding: 0;
+        margin: 0;
+        background: $background-color;
+        border-bottom-width: 0px;
+        height: auto;
+    }
+    .home_header {
+        z-index: auto;
+        width: 100%;
+        height: 500px;
+        margin-top: 5%;
+        transform: skewy(-5deg);
+        -ms-transform: skewy(-5deg);
+        /* IE 9 */
+        -webkit-transform: skewy(-5deg);
+        /* new styles */
+        position: relative;
+        overflow: hidden;
+    }
+    .home_header::before {
+        content: "";
+        background: url(../images/terras_home.jpg) no-repeat;
+        padding-top: -5%;
+        background-size: cover;
+        width: 100%;
+        height: 700px;
+        margin-top: -100px;
+        transform: skewy(5deg);
+        -ms-transform: skewy(5deg);
+        /* IE 9 */
+        -webkit-transform: skewy(5deg);
+        position: absolute;
+    }
+    .home_header::after {
+        content: "Openingsuren";
+        white-space: pre;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 160px;
+        font-size: 2.2em;
+        color: $text-color-title;
+        background: rgba(255, 255, 255, 0.5);
+        background-size: cover;
+        border-radius: 50%;
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        transform: skewY(5deg);
+        text-align: center;
+        bottom: -55%;
+        left: 50%;
+        margin-left: -200px;
+    }
+    .white_openingsuren {
+        height: auto;
+        margin-top: 100px;
+        padding: 0 31%;
+        section.images {
+            display: flex;
+            justify-content: space-between;
+            height: auto;
+            
+        }
+        section.openingsuren {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+        }
+        img {
+            width: 100px;
+            height:100px;
+        }
+        
+        ul li {
+            list-style-type: none;
+            padding: 40px 0;
+            font-size: 1.1em;
+            height: 45px;
+        }
+        ul.uren {
+            padding-top: 27px;
+        }
+        li.text_green {
+            color: $color-green-dark;
+        }
+    }
+
+    .googlemaps {
+
+        position: relative;
+
+        h2 {
+
+            text-align: center;
+            position: absolute;
+            left: 50%;
+            top: 30px;
+            margin:auto; 
+            z-index: 101;    
+            width: 170px;
+            margin-left: -85px;
+            margin-top: 20p;
+        }
+
+        #map {
+            height: 600px;
+            width: 100%;
+            background: white;
+            z-index: 3;
+        }
+
+        #map::before {
+            z-index: 100;
+            content: "";
+            background: $background-color;
+            background-size: cover;
+            border-radius: 50%;
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            top: -45%;
+            left: 50%;
+            margin-left: -200px;
+        }
+
+        article {
+            display: block;
+            height: 500px;
+            transform: skewY(-5deg);
+            z-index: 2; 
+            background: $background-color;
+            text-align: center;
+
+            section{
+                transform: skewY(5deg);
+            }
+
+            section:first-child{
+                
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+
+                div{
+                    display: block;
+                }
+
+                img{
+                    padding: 40px 0;
+                    height: 80px;
+                    
+
+                }
+
+            }
+
+            button {
+                color: #5F7217;
+                background: #EFECE4;
+                padding: 1em;
+                border: none;
+                box-shadow: 1px 1px 1px #999;
+                width: 210px;
+            }
+            button:focus {
+                outline: 0;
+            }
+            button:active {
+                color: #2F3808;
+                outline: none;
+                border: none;
+            }
+        }
+
+    }
+
+
 }

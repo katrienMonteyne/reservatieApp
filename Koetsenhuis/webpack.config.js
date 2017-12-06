@@ -9,11 +9,11 @@ module.exports = {
 
     entry: ['./src/js/app.js', './src/scss/app.scss'],
     output: {
-        path: path.resolve(__dirname, 'dist/js'),
+        path: path.resolve(__dirname, 'public/js'),
         filename: 'app.bundle.js'
     },
     plugins: [
-        new cleanWebpackPlugin('[dist/js]'),
+        new cleanWebpackPlugin('[public/js]'),
         new extractPlugin({
             filename: '../css/app.css',
             allChunks: true

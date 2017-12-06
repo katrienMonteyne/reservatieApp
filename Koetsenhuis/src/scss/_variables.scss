@@ -1,15 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Paytone+One');
 
-$background-color: #eee;
+$background-color: rgb(254, 254, 254);
 $color-green-light: #e9efcc;
 $color-green-extra-light: #F6F7F1;
 $color-green-dark: #5f7309;
+
+$color-green-a-light: $color-green-dark;
+$color-green-a-dark: #2F3808;
+$color-test: #ff00dd;
 
 $color-button-menu: #afe3c7; 
 $color-button-menu-selected: #95d1b0;
 
 $text-color-grey:#5F5E5E;
 
+$text-color-title: #47152B;
+
 $font-logo: 'Paytone One', sans-serif;
 
+$circle-size: 300px;
 

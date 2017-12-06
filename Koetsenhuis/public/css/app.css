@@ -1,0 +1,346 @@
+@import url(https://fonts.googleapis.com/css?family=Paytone+One);* {
+  margin: 0;
+  padding: 0; }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  background: #e9efcc;
+  padding: 15px 80px;
+  border-bottom: 2px solid #5f7309; }
+  header img {
+    height: 25px; }
+  header section {
+    justify-content: space-around;
+    align-content: center;
+    display: flex; }
+    header section img {
+      padding-right: 20px; }
+    header section a {
+      padding: 0 20px;
+      padding-top: 5px; }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 80px;
+  align-content: flex-end; }
+  nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: flex-end; }
+    nav ul li {
+      bottom: 0;
+      padding: 0 15px; }
+  nav div {
+    position: relative;
+    display: flex;
+    align-content: flex-end; }
+    nav div img {
+      height: 80px; }
+    nav div p {
+      position: absolute;
+      bottom: -10px;
+      padding-left: 95px;
+      font-family: "Paytone One", sans-serif;
+      font-size: 2.1em; }
+
+footer {
+  display: block;
+  color: #000;
+  padding-bottom: 50px;
+  z-index: -2;
+  height: 100%;
+  padding-top: 150px;
+  margin-top: -5%; }
+  footer * {
+    display: block;
+    text-align: center;
+    margin: 0 auto; }
+  footer img {
+    width: 80px;
+    height: 80px; }
+  footer h2 {
+    margin-bottom: 0;
+    padding-bottom: 0; }
+  footer img {
+    margin-top: 100px;
+    margin-top: 50px; }
+  footer a {
+    padding-top: 10px; }
+  footer .phone {
+    display: flex;
+    padding: 2em;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center; }
+
+footer.light {
+  background: #F6F7F1; }
+
+footer.dark {
+  background: #E9EECD; }
+
+.block {
+  width: 100%;
+  color: #000;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  height: 100%; }
+
+.block_dark {
+  background: #e9efcc;
+  transform: skewY(-5deg); }
+
+.block_light {
+  background: #F6F7F1;
+  transform: skewY(-5deg); }
+
+body {
+  background: #fefefe;
+  font-family: 'Roboto', 'Helvitica Neue', 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif'; }
+
+a {
+  color: black;
+  text-decoration: none;
+  transition: all 2s linear; }
+
+a:hover {
+  font-weight: bolder;
+  text-decoration: underline; }
+
+body#menu .menu {
+  display: flex;
+  padding-bottom: 5%; }
+  body#menu .menu .menu_main_tekst {
+    padding-top: 9%;
+    padding-left: -50px;
+    padding-right: -50px;
+    margin: 0 auto;
+    transform: skewY(5deg); }
+    body#menu .menu .menu_main_tekst h1 {
+      flex-basis: 100%;
+      font-size: 2em;
+      padding-bottom: 20px;
+      text-align: center; }
+    body#menu .menu .menu_main_tekst table {
+      border-collapse: collapse;
+      width: 100%; }
+    body#menu .menu .menu_main_tekst table td:first-child {
+      padding: 15px 40px; }
+    body#menu .menu .menu_main_tekst table td:last-child {
+      padding: 0 40px; }
+  body#menu .menu .menu_main_buttons {
+    margin: 0 20%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    transform: skewY(5deg); }
+    body#menu .menu .menu_main_buttons .left {
+      margin-left: -46%; }
+    body#menu .menu .menu_main_buttons .hexagon {
+      margin-top: 10px;
+      font-size: 0.5em;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      body#menu .menu .menu_main_buttons .hexagon .hex:before,
+      body#menu .menu .menu_main_buttons .hexagon .hex:after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        border-left: 8.7em solid transparent;
+        border-right: 8.7em solid transparent; }
+      body#menu .menu .menu_main_buttons .hexagon .hex:before {
+        border-bottom: 5em solid #afe3c7;
+        top: -5em;
+        padding-top: 1px;
+        transition: border-bottom 0.2s ease-out; }
+      body#menu .menu .menu_main_buttons .hexagon .hex:after {
+        bottom: -4.9em;
+        border-top: 5em solid #afe3c7;
+        transition: border-top 0.2s ease-out; }
+      body#menu .menu .menu_main_buttons .hexagon .hex {
+        margin-top: 5em;
+        width: 17.35em;
+        height: 10.2em;
+        background-color: #afe3c7;
+        position: relative;
+        display: flex;
+        vertical-align: middle;
+        transition: background-color 0.2s ease-out; }
+      body#menu .menu .menu_main_buttons .hexagon .hex > p {
+        padding-left: 10px;
+        padding-top: 20px;
+        height: 80px;
+        width: 50%;
+        text-align: center;
+        font-size: 2.4em;
+        color: #5F5E5E; }
+      body#menu .menu .menu_main_buttons .hexagon .hex > img {
+        padding-top: 10px;
+        height: 55px;
+        text-align: center; }
+      body#menu .menu .menu_main_buttons .hexagon:hover {
+        cursor: pointer; }
+        body#menu .menu .menu_main_buttons .hexagon:hover .hex {
+          background-color: #95d1b0;
+          transition: background-color 0.4s ease-out; }
+        body#menu .menu .menu_main_buttons .hexagon:hover .hex:before {
+          border-bottom: 5em solid #95d1b0;
+          transition: border-bottom 0.4s ease-out; }
+        body#menu .menu .menu_main_buttons .hexagon:hover .hex:after {
+          border-top: 5em solid #95d1b0;
+          transition: border-top 0.4s ease-out; }
+    body#menu .menu .menu_main_buttons .selected p {
+      color: black !important; }
+
+body#menu .menu_main_first {
+  margin-top: 5%; }
+
+body#menu .menu_main_second {
+  padding-bottom: 150px; }
+
+main.home section > header {
+  padding: 0;
+  margin: 0;
+  background: #fefefe;
+  border-bottom-width: 0px;
+  height: auto; }
+
+main.home .home_header {
+  z-index: auto;
+  width: 100%;
+  height: 500px;
+  margin-top: 5%;
+  transform: skewy(-5deg);
+  -ms-transform: skewy(-5deg);
+  /* IE 9 */
+  -webkit-transform: skewy(-5deg);
+  /* new styles */
+  position: relative;
+  overflow: hidden; }
+
+main.home .home_header::before {
+  content: "";
+  background: url(../images/terras_home.jpg) no-repeat;
+  padding-top: -5%;
+  background-size: cover;
+  width: 100%;
+  height: 700px;
+  margin-top: -100px;
+  transform: skewy(5deg);
+  -ms-transform: skewy(5deg);
+  /* IE 9 */
+  -webkit-transform: skewy(5deg);
+  position: absolute; }
+
+main.home .home_header::after {
+  content: "Openingsuren";
+  white-space: pre;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 160px;
+  font-size: 2.2em;
+  color: #47152B;
+  background: rgba(255, 255, 255, 0.5);
+  background-size: cover;
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  transform: skewY(5deg);
+  text-align: center;
+  bottom: -55%;
+  left: 50%;
+  margin-left: -200px; }
+
+main.home .white_openingsuren {
+  height: auto;
+  margin-top: 100px;
+  padding: 0 31%; }
+  main.home .white_openingsuren section.images {
+    display: flex;
+    justify-content: space-between;
+    height: auto; }
+  main.home .white_openingsuren section.openingsuren {
+    display: flex;
+    justify-content: space-between;
+    text-align: center; }
+  main.home .white_openingsuren img {
+    width: 100px;
+    height: 100px; }
+  main.home .white_openingsuren ul li {
+    list-style-type: none;
+    padding: 40px 0;
+    font-size: 1.1em;
+    height: 45px; }
+  main.home .white_openingsuren ul.uren {
+    padding-top: 27px; }
+  main.home .white_openingsuren li.text_green {
+    color: #5f7309; }
+
+main.home .googlemaps {
+  position: relative; }
+  main.home .googlemaps h2 {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 30px;
+    margin: auto;
+    z-index: 101;
+    width: 170px;
+    margin-left: -85px;
+    margin-top: 20p; }
+  main.home .googlemaps #map {
+    height: 600px;
+    width: 100%;
+    background: white;
+    z-index: 3; }
+  main.home .googlemaps #map::before {
+    z-index: 100;
+    content: "";
+    background: #fefefe;
+    background-size: cover;
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: -45%;
+    left: 50%;
+    margin-left: -200px; }
+  main.home .googlemaps article {
+    display: block;
+    height: 500px;
+    transform: skewY(-5deg);
+    z-index: 2;
+    background: #fefefe;
+    text-align: center; }
+    main.home .googlemaps article section {
+      transform: skewY(5deg); }
+    main.home .googlemaps article section:first-child {
+      display: flex;
+      justify-content: center;
+      flex-direction: column; }
+      main.home .googlemaps article section:first-child div {
+        display: block; }
+      main.home .googlemaps article section:first-child img {
+        padding: 40px 0;
+        height: 80px; }
+    main.home .googlemaps article button {
+      color: #5F7217;
+      background: #EFECE4;
+      padding: 1em;
+      border: none;
+      box-shadow: 1px 1px 1px #999;
+      width: 210px; }
+    main.home .googlemaps article button:focus {
+      outline: 0; }
+    main.home .googlemaps article button:active {
+      color: #2F3808;
+      outline: none;
+      border: none; }

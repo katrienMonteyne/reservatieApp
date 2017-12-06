@@ -1,0 +1,308 @@
+@import '_variables.scss';
+@import '_reset.scss';
+@import 'header.scss';
+@import 'footer.scss';
+@import 'skewblock.scss';
+body {
+    font-family: 'Roboto', 'Helvitica Neue', 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
+}
+
+body#menu {
+    .menu {
+        display: flex;
+        padding-bottom: 5%;
+        .menu_main_tekst {
+            padding-top: 9%;
+            padding-left: -50px;
+            padding-right: -50px;
+            margin: 0 auto;
+            transform: skewY(5deg);
+            h1 {
+                flex-basis: 100%;
+                font-size: 2em;
+                padding-bottom: 20px;
+                text-align: center;
+            }
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+            table td:first-child {
+                padding: 15px 40px;
+            }
+            table td:last-child {
+                padding: 0 40px;
+            }
+        }
+        .menu_main_buttons {
+            margin: 0 20%;
+            padding-top: 5%;
+            padding-bottom: 5%;
+            transform: skewY(5deg);
+            .left {
+                margin-left: -46%;
+            }
+            .hexagon {
+                margin-top: 10px;
+                font-size: 0.5em;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .hex:before,
+                .hex:after {
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    position: absolute;
+                    border-left: 8.7em solid transparent;
+                    border-right: 8.7em solid transparent;
+                }
+                .hex:before {
+                    border-bottom: 5em solid $color-button-menu;
+                    top: -5em;
+                    padding-top: 1px;
+                    transition: border-bottom 0.2s ease-out;
+                }
+                .hex:after {
+                    bottom: -4.9em;
+                    border-top: 5em solid $color-button-menu;
+                    transition: border-top 0.2s ease-out;
+                }
+                .hex {
+                    margin-top: 5em;
+                    width: 17.35em;
+                    height: 10.2em;
+                    background-color: $color-button-menu;
+                    position: relative;
+                    display: flex;
+                    vertical-align: middle;
+                    transition: background-color 0.2s ease-out;
+                }
+                .hex>p {
+                    padding-left: 10px;
+                    padding-top: 20px;
+                    height: 80px;
+                    width: 50%;
+                    text-align: center;
+                    font-size: 2.4em;
+                    color: $text-color-grey;
+                }
+                .hex>img {
+                    padding-top: 10px;
+                    height: 55px;
+                    text-align: center;
+                }
+                &:hover {
+                    cursor: pointer;
+                    .hex {
+                        background-color: $color-button-menu-selected;
+                        transition: background-color 0.4s ease-out;
+                    }
+                    .hex:before {
+                        border-bottom: 5em solid $color-button-menu-selected;
+                        transition: border-bottom 0.4s ease-out;
+                    }
+                    .hex:after {
+                        border-top: 5em solid $color-button-menu-selected;
+                        transition: border-top 0.4s ease-out;
+                    }
+                }
+            }
+            .selected p {
+                color: black !important;
+            }
+        }
+    }
+    .menu_main_first {
+        margin-top: 5%;
+
+    }
+    .menu_main_second {
+        padding-bottom: 150px;
+    }
+}
+
+@import url(https://fonts.googleapis.com/css?family=Paytone+One);* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px; }
+  
+  header.main {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    background: #e9efcc;
+    padding: 15px 80px;
+    border-bottom: 2px solid #5f7309; }
+    header.main img {
+      height: 25px; }
+    header.main section {
+      justify-content: space-around;
+      align-content: center;
+      display: flex; }
+      header.main section img {
+        padding-right: 20px; }
+      header.main section a {
+        padding: 0 20px;
+        padding-top: 5px; }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 80px;
+    align-content: flex-end; }
+    nav ul {
+      display: flex;
+      list-style: none;
+      justify-content: space-around;
+      align-items: flex-end; }
+      nav ul li {
+        bottom: 0;
+        padding: 0 15px; }
+    nav div {
+      position: relative;
+      display: flex;
+      align-content: flex-end; }
+      nav div img {
+        height: 80px; }
+      nav div p {
+        position: absolute;
+        bottom: -10px;
+        padding-left: 95px;
+        font-family: "Paytone One", sans-serif;
+        font-size: 2.1em; }
+  
+  footer {
+    width: 100%;
+    display: block;
+    color: #000;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 50px;
+    transform: skewy(-5deg);
+    -ms-transform: skewy(-5deg);
+    /* IE 9 */
+    -webkit-transform: skewy(-5deg); }
+    footer * {
+      display: block;
+      text-align: center;
+      margin: 0 auto; }
+    footer img {
+      width: 80px;
+      height: 80px; }
+    footer h2 {
+      margin-bottom: 0;
+      padding-bottom: 0; }
+    footer img {
+      margin-top: 100px;
+      margin-top: 50px; }
+    footer a {
+      padding-top: 10px; }
+    footer .phone {
+      display: flex;
+      padding: 2em;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center; }
+  
+  footer > * {
+    content: "";
+    transform: skewy(5deg);
+    -ms-transform: skewy(5deg);
+    /* IE 9 */
+    -webkit-transform: skewy(5deg); }
+  
+  footer::after {
+    content: "";
+    display: block;
+    height: 100%;
+    position: relative; }
+  
+  footer.light {
+    background: #F6F7F1; }
+  
+  footer.dark {
+    background: #E9EECD; }
+  
+  body {
+    background: #eee;
+    font-family: 'Roboto', 'Helvitica Neue', 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif'; }
+  
+  h2 {
+    padding: 70px 0;
+    color: #46162B;
+    font-size: 2em; }
+  
+  a {
+    color: black;
+    text-decoration: none;
+    transition: all 2s linear; }
+  
+  a:hover {
+    font-weight: bolder;
+    text-decoration: underline; }
+  
+  main {
+    margin-bottom: 100px; }
+  
+  main.home .home_header {
+    z-index: auto;
+    width: 100%;
+    height: 500px;
+    margin: 100px 0 0 0;
+    transform: skewy(-5deg);
+    -ms-transform: skewy(-5deg);
+    /* IE 9 */
+    -webkit-transform: skewy(-5deg);
+    /* new styles */
+    position: relative;
+    overflow: hidden;
+    -webkit-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left; }
+  
+  main.home .home_header::before {
+    content: "";
+    background: url(../images/terras_home.jpg) ;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    margin-top: -100px;
+    transform: skewy(5deg);
+    -ms-transform: skewy(5deg);
+    /* IE 9 */
+    -webkit-transform: skewy(5deg);
+    position: absolute;
+    -webkit-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left; }
+  
+  main.home .home_header_white {
+    background: rgba(255, 0, 221, 0.9);
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    margin: -200px auto;
+    left: calc(50% +( $circle-size / 2));
+    border-radius: 100%;
+    position: absolute; }
+  
+  main.home .white_openingsuren {
+    height: 1000px; }
+  
+  main.home button {
+    color: #5F7217;
+    background: #EFECE4;
+    padding: 1em;
+    border: none;
+    box-shadow: 1px 1px 1px #999; }
+  
+  main.home button:focus {
+    outline: 0; }
+  
+  main.home button:active {
+    color: #2F3808;
+    outline: none;
+    border:none;
+  }
