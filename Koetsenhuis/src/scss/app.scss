@@ -23,6 +23,44 @@ a:hover {
 
 ///////////////////////////////////////// MENU LAYOUT
 body#menu {
+
+    ///////////////////////////////////////// login LAYOUT
+
+    h2{
+        font-weight: lighter;
+    }
+    label{
+        display: block;
+        visibility: hidden;
+    }
+    
+    input{
+        outline: none;
+        color: $color-input;
+        font-size: 1.2em;
+        width: 400px;
+        margin-bottom: 1em;
+        border: 0;
+        border-bottom: 1px solid $color-input;
+        background: rgba(255, 255, 255, 0.0);
+    }
+    input[type=submit]{
+
+        margin-top: 50px;
+        font-size: 1.2em;
+        padding: 0.2em;
+        border: none;
+        width: 250px;
+        border-radius: 0px;
+        background: $color-button-login;
+    }
+    .icon{
+        height: 25px;
+    }
+    .login_icon{
+        margin-left: -30px;
+    }
+
     .menu {
         display: flex;
         padding-bottom: 5%;
@@ -317,3 +355,4 @@ main.home {
 
 
 }
+

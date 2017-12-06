@@ -20,7 +20,8 @@ module.exports = {
         }),
         new FileWatcherPlugin({
             root: __dirname,
-            files: ['**/**/*.scss', '**/**/*.js']
+            files: ['**/**/*.scss', '**/**/*.js'],
+            onReadyCallback: () => console.log('Yo Im ready')
         })
     ],
     module: {
