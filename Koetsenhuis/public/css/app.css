@@ -113,6 +113,38 @@ a:hover {
   font-weight: bolder;
   text-decoration: underline; }
 
+body#menu h2 {
+  font-weight: lighter; }
+
+body#menu label {
+  display: block;
+  visibility: hidden; }
+
+body#menu input {
+  outline: none;
+  color: #474747;
+  font-size: 1.2em;
+  width: 400px;
+  margin-bottom: 1em;
+  border: 0;
+  border-bottom: 1px solid #474747;
+  background: rgba(255, 255, 255, 0); }
+
+body#menu input[type=submit] {
+  margin-top: 50px;
+  font-size: 1.2em;
+  padding: 0.2em;
+  border: none;
+  width: 250px;
+  border-radius: 0px;
+  background: #B6CB5E; }
+
+body#menu .icon {
+  height: 25px; }
+
+body#menu .login_icon {
+  margin-left: -30px; }
+
 body#menu .menu {
   display: flex;
   padding-bottom: 5%; }
