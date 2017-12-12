@@ -8,7 +8,6 @@ body {
     font-family: 'Roboto', 'Helvitica Neue', 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
 }
 
-
 a {
     color: black;
     text-decoration: none;
@@ -20,21 +19,17 @@ a:hover {
     text-decoration: underline;
 }
 
-
 ///////////////////////////////////////// MENU LAYOUT
 body#menu {
-
     ///////////////////////////////////////// login LAYOUT
-
-    h2{
+    h2 {
         font-weight: lighter;
     }
-    label{
+    label {
         display: block;
         visibility: hidden;
     }
-    
-    input{
+    input {
         outline: none;
         color: $color-input;
         font-size: 1.2em;
@@ -44,8 +39,7 @@ body#menu {
         border-bottom: 1px solid $color-input;
         background: rgba(255, 255, 255, 0.0);
     }
-    input[type=submit]{
-
+    input[type=submit] {
         margin-top: 50px;
         font-size: 1.2em;
         padding: 0.2em;
@@ -54,13 +48,12 @@ body#menu {
         border-radius: 0px;
         background: $color-button-login;
     }
-    .icon{
+    .icon {
         height: 25px;
     }
-    .login_icon{
+    .login_icon {
         margin-left: -30px;
-    }
-
+    } ////////////////////////////////////////////////////////////////
     .menu {
         display: flex;
         padding-bottom: 5%;
@@ -175,7 +168,7 @@ body#menu {
 }
 
 ///////////////////////////////////////// HOME LAYOUT
-main.home {
+main.home_main {
     section>header {
         padding: 0;
         margin: 0;
@@ -238,7 +231,6 @@ main.home {
             display: flex;
             justify-content: space-between;
             height: auto;
-            
         }
         section.openingsuren {
             display: flex;
@@ -247,9 +239,8 @@ main.home {
         }
         img {
             width: 100px;
-            height:100px;
+            height: 100px;
         }
-        
         ul li {
             list-style-type: none;
             padding: 40px 0;
@@ -263,31 +254,25 @@ main.home {
             color: $color-green-dark;
         }
     }
-
     .googlemaps {
-
         position: relative;
-
         h2 {
-
             text-align: center;
             position: absolute;
             left: 50%;
             top: 30px;
-            margin:auto; 
-            z-index: 101;    
+            margin: auto;
+            z-index: 101;
             width: 170px;
             margin-left: -85px;
             margin-top: 20p;
         }
-
         #map {
             height: 600px;
             width: 100%;
             background: white;
             z-index: 3;
         }
-
         #map::before {
             z-index: 100;
             content: "";
@@ -301,38 +286,28 @@ main.home {
             left: 50%;
             margin-left: -200px;
         }
-
         article {
             display: block;
             height: 500px;
             transform: skewY(-5deg);
-            z-index: 2; 
+            z-index: 2;
             background: $background-color;
             text-align: center;
-
-            section{
+            section {
                 transform: skewY(5deg);
             }
-
-            section:first-child{
-                
+            section:first-child {
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
-
-                div{
+                div {
                     display: block;
                 }
-
-                img{
+                img {
                     padding: 40px 0;
                     height: 80px;
-                    
-
                 }
-
             }
-
             button {
                 color: #5F7217;
                 background: #EFECE4;
@@ -350,9 +325,168 @@ main.home {
                 border: none;
             }
         }
-
     }
-
-
 }
 
+.galerij_main {
+
+    margin: 0;
+    padding: 0;
+
+    .galerij_main_first{
+
+        margin-top: 4%;
+        padding:5% 0;
+
+    }
+    ul{
+        transform: skewY(5deg);
+    }
+    #hexGrid {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        margin: 0 auto;
+        overflow: hidden;
+        font-family: sans-serif;
+        list-style-type: none;
+    }
+    .hex {
+        position: relative;
+        visibility: hidden;
+        outline: 1px solid transparent;
+        /* fix for jagged edges in FF on hover transition */
+        transition: all 0.5s;
+        backface-visibility: hidden;
+        will-change: transform;
+        transition: all 0.5s;
+    }
+    .hex::after {
+        content: '';
+        display: block;
+        padding-bottom: 86.602%;
+        /* =  100 / tan(60) * 1.5 */
+    }
+    .hexIn {
+        position: absolute;
+        width: 96%;
+        padding-bottom: 110.851%;
+        /* =  width / sin(60) */
+        margin: 2%;
+        overflow: hidden;
+        visibility: hidden;
+        outline: 1px solid transparent;
+        /* fix for jagged edges in FF on hover transition */
+        -webkit-transform: rotate3d(0, 0, 1, -60deg) skewY(30deg);
+        -ms-transform: rotate3d(0, 0, 1, -60deg) skewY(30deg);
+        transform: rotate3d(0, 0, 1, -60deg) skewY(30deg);
+        transition: all 0.5s;
+    }
+    .hexIn * {
+        position: absolute;
+        visibility: visible;
+        outline: 1px solid transparent;
+        /* fix for jagged edges in FF on hover transition */
+    }
+    .hexLink {
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        overflow: hidden;
+        -webkit-transform: skewY(-30deg) rotate3d(0, 0, 1, 60deg);
+        -ms-transform: skewY(-30deg) rotate3d(0, 0, 1, 60deg);
+        transform: skewY(-30deg) rotate3d(0, 0, 1, 60deg);
+    }
+    /*** HEX CONTENT **********************************************************************/
+    .img {
+        background-color: purple;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-position: center center;
+        background-size: cover;
+        overflow: hidden;
+        -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+    .img:before,
+    .img:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        content: '';
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+    /*** HEXAGON SIZING AND EVEN ROW INDENTATION *****************************************************************/
+    @media (min-width:1201px) {
+        /* <- 5-4  hexagons per row */
+        #hexGrid {
+            padding-bottom: 4.4%
+        }
+        .hex {
+            width: 20%;
+            /* = 100 / 5 */
+        }
+        .hex:nth-child(9n+6) {
+            /* first hexagon of even rows */
+            margin-left: 10%;
+            /* = width of .hex / 2  to indent even rows */
+        }
+    }
+    @media (max-width: 1200px) and (min-width:901px) {
+        /* <- 4-3  hexagons per row */
+        #hexGrid {
+            padding-bottom: 5.5%
+        }
+        .hex {
+            width: 25%;
+            /* = 100 / 4 */
+        }
+        .hex:nth-child(7n+5) {
+            /* first hexagon of even rows */
+            margin-left: 12.5%;
+            /* = width of .hex / 2  to indent even rows */
+        }
+    }
+    @media (max-width: 900px) and (min-width:601px) {
+        /* <- 3-2  hexagons per row */
+        #hexGrid {
+            padding-bottom: 7.4%
+        }
+        .hex {
+            width: 33.333%;
+            /* = 100 / 3 */
+        }
+        .hex:nth-child(5n+4) {
+            /* first hexagon of even rows */
+            margin-left: 16.666%;
+            /* = width of .hex / 2  to indent even rows */
+        }
+    }
+    @media (max-width: 600px) {
+        /* <- 2-1  hexagons per row */
+        #hexGrid {
+            padding-bottom: 11.2%
+        }
+        .hex {
+            width: 50%;
+            /* = 100 / 3 */
+        }
+        .hex:nth-child(3n+3) {
+            /* first hexagon of even rows */
+            margin-left: 25%;
+            /* = width of .hex / 2  to indent even rows */
+        }
+    }
+    @media (max-width: 400px) {
+        #hexGrid {
+            font-size: 13px;
+        }
+    }
+}
