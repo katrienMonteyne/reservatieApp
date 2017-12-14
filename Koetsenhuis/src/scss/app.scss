@@ -19,6 +19,8 @@ a:hover {
     text-decoration: underline;
 }
 
+
+
 ///////////////////////////////////////// MENU LAYOUT
 body#menu {
     ///////////////////////////////////////// login LAYOUT
@@ -167,19 +169,19 @@ body#menu {
     }
 }
 
-///////////////////////////////////////// HOME LAYOUT
+///////////////////////////////////////// INDEX LAYOUT
 main.home_main {
     section>header {
         padding: 0;
         margin: 0;
         background: $background-color;
         border-bottom-width: 0px;
-        height: auto;
+        height: 150%;
     }
     .home_header {
         z-index: auto;
         width: 100%;
-        height: 500px;
+        height: 600px;
         margin-top: 5%;
         transform: skewy(-5deg);
         -ms-transform: skewy(-5deg);
@@ -195,7 +197,7 @@ main.home_main {
         padding-top: -5%;
         background-size: cover;
         width: 100%;
-        height: 700px;
+        height: 800px;
         margin-top: -100px;
         transform: skewy(5deg);
         -ms-transform: skewy(5deg);
@@ -328,18 +330,18 @@ main.home_main {
     }
 }
 
+///////////////////////////////////////// GALERIJ LAYOUT
 .galerij_main {
-
     margin: 0;
     padding: 0;
-
-    .galerij_main_first{
-
-        margin-top: 4%;
-        padding:5% 0;
-
+    h1 {
+        transform: skewY(5deg);
     }
-    ul{
+    .galerij_main_first {
+        margin-top: 4%;
+        padding: 5% 0;
+    }
+    ul {
         transform: skewY(5deg);
     }
     #hexGrid {
@@ -489,4 +491,149 @@ main.home_main {
             font-size: 13px;
         }
     }
+}
+
+.beisbroek_main {
+
+    header {
+        padding: 0;
+        margin: 0;
+        background: $background-color;
+        border-bottom-width: 0px;
+        height: 150%;
+    }
+    .beisbroek_header {
+        z-index: auto;
+        width: 100%;
+        height: 600px;
+        margin-top: 5%;
+        transform: skewy(-5deg);
+        -ms-transform: skewy(-5deg);
+        /* IE 9 */
+        -webkit-transform: skewy(-5deg);
+        /* new styles */
+        position: relative;
+        overflow: hidden;
+    }
+    .beisbroek_header::before {
+        content: "";
+        background: url(../images/terras_home.jpg) no-repeat;
+        padding-top: -5%;
+        background-size: cover;
+        width: 100%;
+        height: 800px;
+        margin-top: -100px;
+        transform: skewy(5deg);
+        -ms-transform: skewy(5deg);
+        /* IE 9 */
+        -webkit-transform: skewy(5deg);
+        position: absolute;
+    }
+    .beisbroek_header::after {
+        content: "Domein Beisbroek";
+        white-space: pre;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 160px;
+        font-size: 2.2em;
+        color: $text-color-title;
+        background: rgba(255, 255, 255, 0.5);
+        background-size: cover;
+        border-radius: 50%;
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        transform: skewY(5deg);
+        text-align: center;
+        bottom: -45%;
+        left: 50%;
+        margin-left: -200px;
+    }
+
+    .links{
+        padding: 100px 0;
+        width: 100%;
+        transform: skewY(-5deg);
+        display: block;
+        height: 100%;
+        z-index: 3;
+        background-color: $background-color;
+
+        article{
+            text-align: center;
+            transform: skewY(5deg);
+        }
+
+        img{
+            display: block;
+            height: 60px;
+            width: 60px;
+            margin: auto;
+            margin-top: 40px;
+        }
+        span:first-child{
+            display: block;
+            padding: 25px 0;
+            font-size: 1.2em;
+        }
+
+        article > div{
+            position: relative;
+        }
+
+        .arrow {
+            margin-left: 150px;
+            opacity:0;
+            position: absolute;
+            left:50%;
+            top:62%;
+            transform-origin: 10% 20%;
+            transform: rotate(-90deg) translate3d(-80%, -90%, 0);
+        }
+        
+        .arrow-first {
+            animation: arrow-movement 2s ease-in-out infinite;
+        }
+        .arrow-second {
+            animation: arrow-movement 2s 1s ease-in-out infinite;
+        }
+        
+        .arrow:before,
+        .arrow:after {
+            background-color:black;
+            content: '';
+            display: block;
+            height: 2px; 
+            position: absolute;
+                top: 0;
+                left: 0;
+            width: 20px;
+        }
+        
+        .arrow:before {
+            transform: rotate(45deg) translateX(-23%);
+            transform-origin: top left;
+        }
+        
+        .arrow:after {
+            transform: rotate(-45deg) translateX(23%);
+            transform-origin: top right;
+        }
+        
+        
+        @keyframes arrow-movement {
+            0% { 
+                opacity: 0;
+                left: 49%;
+            }
+            70% {
+                opacity: 1;
+            }
+            100% { 
+                opacity: 0;
+            }
+        }
+        
+    }
+
 }
